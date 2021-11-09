@@ -10,7 +10,10 @@
  const url= 'mongodb+srv://siva:Siva0127@cluster0.4agkn.mongodb.net/siva?retryWrites=true&w=majority'   //here we are connecting to database using url
  
  const app=express()
- 
+ const cors = require('cors')
+
+ app.use(cors())
+
  mongoose.connect(url,{useNewUrlParser:true})   //connecting to mongoose 
  const con =mongoose.connection                 // connecting to database
  
